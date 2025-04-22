@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="popup.css" />
+    <script src="chart/chart.umd.js"></script>
+    <script src="popup.js" defer></script>
+  </head>
+  <body class="dark:bg-[#121212] text-white font-sans p-4">
+    <div class="container">
+      <h1 class="text-2xl font-bold mb-4">Crypto Tracker 💹</h1>
+
+      <label for="modeToggle" class="flex items-center mb-4 cursor-pointer">
+        <span class="text-lg">Dark/Light Mode</span>
+        <input type="checkbox" id="modeToggle" class="ml-2" />
+      </label>
+
+      <div class="mb-4 w-full">
+        <select id="coinSelect" class="w-full p-2 bg-gray-800 rounded-md text-white">
+          <option value="bitcoin">Bitcoin</option>
+          <option value="ethereum">Ethereum</option>
+          <option value="litecoin">Litecoin</option>
+        </select>
+      </div>
+
+      <div id="price-list" class="mb-5 space-y-3 w-full"></div>
+
+      <canvas id="priceChart" width="600" height="300" class="rounded-md shadow-md mb-4"></canvas>
+
+      <button id="exportBtn" class="w-full bg-[#00ffcc] hover:bg-[#00cc99] text-black px-4 py-2 rounded font-semibold">
+        📤 Export PNG
+      </button>
+    </div>
+  </body>
+</html>
